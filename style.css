@@ -1,25 +1,21 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #f7f7f7, #eaeaea);
+  background: #fff;
   color: #111;
 }
 
-/* TOP BAR */
-.topbar {
+/* NAV */
+.nav {
   display: flex;
   justify-content: space-between;
   padding: 16px 32px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
-  font-weight: 700;
+  font-weight: 600;
   color: #b00020;
-  font-size: 18px;
 }
 
 nav a {
@@ -35,61 +31,41 @@ nav a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .hero img {
   width: 80%;
   max-width: 900px;
-  border: none;
 }
 
-/* SECTIONS */
-.section {
-  text-align: center;
+/* PAGE SECTIONS */
+.page {
   padding: 60px 20px;
+  text-align: center;
 }
 
-h2 {
-  color: #b00020;
-}
-
-/* TEXT BLOCKS */
-.text-block {
-  max-width: 850px;
+.text {
+  max-width: 800px;
   margin: auto;
   text-align: left;
-  line-height: 1.7;
-}
-
-/* LISTS */
-ul {
-  text-align: left;
-  max-width: 800px;
-  margin: 20px auto;
+  line-height: 1.6;
 }
 
 /* BUTTON */
-.button {
+.cta, .btn {
   display: inline-block;
   padding: 14px 22px;
-  background: linear-gradient(90deg, #b00020, #7a0016);
+  background: #b00020;
   color: white;
-  font-weight: 600;
   text-decoration: none;
-  border-radius: 0;
-  border: 1px solid #5a0010;
+  border: none;
+  font-weight: 600;
 }
 
 .note {
   font-size: 12px;
   opacity: 0.6;
-  margin-top: 10px;
-}
-
-/* LINKS */
-a {
-  color: #b00020;
 }
 
 /* FOOTER */
@@ -97,26 +73,21 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(180deg, #0b0b0b, #1a0000);
+    background: #0b0b0b;
     color: white;
   }
 
-  .topbar {
-    background: #120000;
-    border-bottom: 1px solid #b00020;
+  .nav {
+    border-bottom: 1px solid #222;
   }
 
   nav a {
-    color: white;
-  }
-
-  ul {
     color: white;
   }
 }
