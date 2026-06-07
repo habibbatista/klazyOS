@@ -1,9 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* PAGE FADE SYSTEM */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
   color: #111;
-  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* NAV */
@@ -21,16 +31,13 @@ body {
 
 .logo {
   font-weight: 700;
-  font-size: 18px;
   color: #b00020;
-  letter-spacing: 0.5px;
 }
 
 nav a {
   margin-left: 16px;
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
+  color: #111;
   transition: 0.2s;
 }
 
@@ -41,25 +48,26 @@ nav a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 80px 20px;
 }
 
 .hero img {
   width: 85%;
   max-width: 950px;
-  height: auto;
   border: none;
-  margin-bottom: 30px;
+  transition: transform 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.01);
 }
 
 .hero h1 {
   font-size: 42px;
-  font-weight: 600;
   margin: 10px 0;
 }
 
 .hero p {
-  font-size: 16px;
   opacity: 0.7;
 }
 
@@ -70,19 +78,15 @@ nav a:hover {
 }
 
 h2 {
-  font-size: 28px;
   color: #b00020;
-  margin-bottom: 20px;
 }
 
-/* TEXT BLOCK */
+/* TEXT */
 .text-block {
   max-width: 850px;
   margin: auto;
   text-align: left;
   line-height: 1.8;
-  font-size: 15px;
-  color: #333;
 }
 
 /* BUTTON */
@@ -92,10 +96,9 @@ h2 {
   background: #b00020;
   color: white;
   text-decoration: none;
+  border: none;
   font-weight: 600;
-  border-radius: 0;
-  margin-top: 20px;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 .cta:hover, .btn:hover {
@@ -103,17 +106,10 @@ h2 {
   background: #8a0019;
 }
 
-/* NOTE */
-.note {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 10px;
-}
-
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px;
   font-size: 12px;
   opacity: 0.5;
 }
@@ -124,16 +120,15 @@ footer {
     font-size: 32px;
   }
 
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 10px;
   }
 }
 
