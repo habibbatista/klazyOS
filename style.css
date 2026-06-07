@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* HEADER */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #000;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: 700;
+  color: gold;
+  font-size: 18px;
+}
+
+nav a {
+  margin-left: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* SECTIONS */
+.section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: gold;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero img {
+    width: 90%;
+  }
+}
