@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>klazyOS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,17 +22,31 @@
 </header>
 
 <main class="hero">
-  <img src="assets/laptop.PNG" alt="klazyOS preview">
+  <img src="assets/laptop.PNG">
 
   <h1>klazyOS 26</h1>
-  <p>A modern operating system designed for general computing.</p>
+  <p>A modern operating system for general computing.</p>
 
   <a class="cta" href="download.html">View Download</a>
 </main>
 
-<footer>
-  <p>© 2026 klazyOS</p>
-</footer>
+<footer>© 2026 klazyOS</footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+});
+
+document.querySelectorAll("a").forEach(a => {
+  if (a.href.startsWith(window.location.origin)) {
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      document.body.classList.remove("loaded");
+      setTimeout(() => window.location = a.href, 300);
+    });
+  }
+});
+</script>
 
 </body>
 </html>
